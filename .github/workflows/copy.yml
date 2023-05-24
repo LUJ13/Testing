@@ -13,4 +13,6 @@ jobs:
 
     - name: Copy File to Local
       run: |
-        echo F|xcopy https://github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt C:\laragon\www
+        curl -LJO https://github.com/ClydeLiu1/studio4-chatbot-project/raw/main/About.txt
+xcopy About.txt C:\laragon\www
+
