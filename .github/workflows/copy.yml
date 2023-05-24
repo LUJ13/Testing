@@ -13,4 +13,4 @@ jobs:
 
     - name: Copy File to Local
       run: |
-        cp github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt C:\laragon\www
+        echo F|xcopy https://github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt C:\laragon\www
