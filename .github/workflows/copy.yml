@@ -14,5 +14,5 @@ jobs:
     - name: Copy File to Local
       run: |
         curl -LJO https://github.com/ClydeLiu1/studio4-chatbot-project/raw/main/About.txt
-xcopy About.txt C:\laragon\www
+           |xcopy About.txt C:\laragon\www
 
