@@ -16,4 +16,4 @@ jobs:
       - name: Copy file to local directory
         run: |
           $destination = "C:\laragon\www"
-          Copy-Item -Path "https://github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt" -Destination $destination -Force
+          Copy-Item -Path "github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt" -Destination $destination -Force
