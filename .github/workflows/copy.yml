@@ -1,0 +1,16 @@
+name: Copy File to Local
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copy_file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Copy File to Local
+      run: |
+        cp https://github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt C:\laragon\www
