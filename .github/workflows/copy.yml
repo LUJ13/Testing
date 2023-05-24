@@ -1,18 +1,19 @@
-name: Copy File to Local
+name: Copy File
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  copy_file:
+  copy-file:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Copy File to Local
-      run: |
-        curl -LJQ https://github.com/ClydeLiu1/studio4-chatbot-project/raw/main/About.txt
-           |xcopy About.txt C:\laragon\www
-
+      - name: Copy file to local directory
+        run: |
+          $destination = "C:\laragon\www"
+          Copy-Item -Path "https://github.com/ClydeLiu1/studio4-chatbot-project/blob/main/About.txt" -Destination $destination -Force
